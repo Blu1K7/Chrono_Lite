@@ -1,67 +1,36 @@
-# 🔍 Chrono_Lite  
-*Lightweight, timestamp-centric OSINT metadata toolkit*
+# 🛰️ Chrono_Lite – Bug Bounty Recon Workflow
 
-Chrono_Lite provides fast, tamper-aware timestamp extraction for images and videos.  
-Built for field analysts, journalists, and security researchers who need **portable, precise, no-fluff tools**.
+**by BLU1K7 | Tactical Automation for Opportunistic Bounty**
 
 ---
 
-## ⚙️ Core Features
+## 🧠 About This Project
 
-- ⚡ **Ultra-light** metadata parsing (EXIF, XMP, video headers)
-- 🕒 Canonical extraction of creation, modification & embedded timestamps
-- 🔐 Tamper-check logic with **SHA-256 hash** traceability
-- 📤 Minimal export formats: JSON, TXT, terminal stdout
-- 🚫 Zero external dependencies (pure Python)
+Chrono_Lite is a modular reconnaissance and ranking engine designed to enhance the efficiency of bug bounty hunting.  
+It prioritizes speed, automation, and signal clarity — filtering only the most valuable opportunities across multiple platforms.
 
----
-
-## 🧠 Why Chrono_Lite?
-
-Chrono_Lite was designed during bounty-focused workflows where timing was everything.  
-It helped surface edge-case timestamp forgeries, silent modifications, and **chain-of-events validation**.
+Built as part of a wider offensive security framework (LIAoS), this repo represents a public-facing component of a much deeper ecosystem.
 
 ---
 
-## 🛠️ Field-Tested Concepts (Bug Bounty Context)
+## ⚙️ Core Modules
 
-> 💬 This module has been inspired by or directly tested in live bounty environments — both private and public.
+| Module Name       | Description                                                                 |
+|-------------------|-----------------------------------------------------------------------------|
+| `platform_ranker` | Ranks bounty platforms by reward ratio, volume, and ease of entry.          |
+| `jobwatcher`      | Monitors bounty job feeds (API, RSS, HTML-scrape) and logs new entries.     |
+| `bounty_logger`   | Archives submissions and feedback for internal analysis.                    |
+| `report_gen`      | Generates professional-grade reports (PDF, MD, JSON).                       |
+| `ghost_feed`      | Pushes heartbeat commits to simulate activity and ensure visibility.        |
 
-- 🧭 Used for validating log integrity after suspicious platform actions
-- 🧪 Timestamp conflict surfacing in tampered uploads
-- 🧷 Static forensic timeline reconstruction
-
----
-
-## 📁 Project Chrono_Lite/
-├── chrono_lite.py
-├── README.md
-├── LICENSE
-├── .bounty_stamp
-├── results/
-│   └── output.json
-└── reports/
-└── html_report.html
+> 🧩 Private modules (e.g. escalation, anti-captcha, API chainers, etc.) are not included in this repo.
 
 ---
 
-## 🧩 Coming Add-ons
----
+## 🚀 Quick Start
 
-## 🧩 Coming Add-ons
+```bash
+git clone https://github.com/Blu1K7/Chrono_Lite.git
+cd Chrono_Lite/modules/platform_ranker
+python3 ranker.py
 
-| Module          | Description                              |
-|-----------------|------------------------------------------|
-| `ChronoGuard`   | Tamper fingerprinting & alert engine     |
-| `SignalExtract` | Timeline noise vs signal isolator        |
-| `ChronoReport`  | Polished PDF/HTML reporting with branding|
-
----
-
-## 🏷 License  
-MIT — free to use, modify, and integrate in forensic or OSINT workflows.
-
----
-
-## 🧠 Maintained by  
-**BLU1K7™ — Blouin-Cossette**
